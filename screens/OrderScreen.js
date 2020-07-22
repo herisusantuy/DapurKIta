@@ -9,7 +9,7 @@ import {
   Button,
 } from 'react-native';
 
-const DetailsScreen = ({navigation}) => {
+const OrderScreen = ({navigation}) => {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text>Detail Screen</Text>
@@ -30,4 +30,4 @@ const DetailsScreen = ({navigation}) => {
   );
 };
 
-export default DetailsScreen;
+export default OrderScreen;
