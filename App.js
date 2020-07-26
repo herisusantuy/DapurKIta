@@ -21,6 +21,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 // Screen
 import MainTabScreen from './screens/MainTabScreen';
 import DrawerContent from './screens/DrawerContent';
+import RootStackScreen from './screens/RootStackScreen';
 
 // Navigation
 const Drawer = createDrawerNavigator();
@@ -28,9 +29,10 @@ const Drawer = createDrawerNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Drawer.Navigator drawerContent={(props) => <DrawerContent {...props} />}>
+      <RootStackScreen />
+      {/* <Drawer.Navigator drawerContent={(props) => <DrawerContent {...props} />}>
         <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
-      </Drawer.Navigator>
+      </Drawer.Navigator> */}
     </NavigationContainer>
   );
 };

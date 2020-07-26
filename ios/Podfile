@@ -9,6 +9,7 @@ target 'IndahKitchenApp' do
   use_react_native!(:path => config["reactNativePath"])
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
 
   target 'IndahKitchenAppTests' do
     inherit! :complete
