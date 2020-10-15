@@ -87,7 +87,7 @@ const HomeStackScreen = ({navigation}) => (
       name="Home"
       component={HomeScreen}
       options={{
-        title: 'Indah Kitchen App',
+        title: 'Studio Kita',
         headerLeft: () => (
           <Icon.Button
             name="ios-menu"

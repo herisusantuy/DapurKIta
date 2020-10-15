@@ -12,11 +12,7 @@ import {
 const FavouriteScreen = ({navigation}) => {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Favourite Screen</Text>
-      <Button
-        title="Go to details screen"
-        onPress={() => navigation.navigate('Details')}
-      />
+      <Text>Favourite Screen</Text> 
     </View>
   );
 };

@@ -9,16 +9,13 @@ import {
   Button,
 } from 'react-native';
 
-const HomeScreen = ({navigation}) => {
+const OrderScreen = ({navigation}) => {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Home Screen</Text>
-      <Button
-        title="Go to details screen"
-        onPress={() => navigation.navigate('Details')}
-      />
+      <Text>Detail Screen</Text>
+       
     </View>
   );
 };
 
-export default HomeScreen;
+export default OrderScreen;

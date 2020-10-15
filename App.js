@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -8,32 +8,30 @@ import {
   StatusBar,
   Button,
 } from 'react-native';
+import {Provider} from 'react-redux';
+import store from './js/store/store';
+import {useDispatch} from 'react-redux';
+// import {getNowPlayingAction} from './js/actions/movieAction';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 import {NavigationContainer} from '@react-navigation/native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 // Screen
-import MainTabScreen from './screens/MainTabScreen';
-import DrawerContent from './screens/DrawerContent';
-import RootStackScreen from './screens/RootStackScreen';
+import RootStackScreen from './js/screens/RootStackScreen';
 
 // Navigation
 const Drawer = createDrawerNavigator();
 
 const App = () => {
+  // const dispatch = useDispatch();
+  useEffect(() => {
+    // dispatch(getNowPlayingAction());
+  }, []);
   return (
-    <NavigationContainer>
-      <RootStackScreen />
-      {/* <Drawer.Navigator drawerContent={(props) => <DrawerContent {...props} />}>
-        <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
-      </Drawer.Navigator> */}
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <RootStackScreen />
+      </NavigationContainer>
+    </Provider>
   );
 };
 
